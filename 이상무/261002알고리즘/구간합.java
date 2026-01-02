@@ -20,6 +20,9 @@ public class 구간합 {
             result.append(partialSum[to-1] - (from == 1 ? 0 : partialSum[from - 2]));
             result.append(i == n-1 ? "" : '\n');
         }
+
+        scanner.close();
+        
         System.out.println(result);
     }
 }
