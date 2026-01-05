@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-class Main {
+class 좋은_수 {
     public static void main(String[] args) throws IOException {
         
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -21,12 +21,12 @@ class Main {
 
         int answer = 0;
 
-        for (int i = 0; i < size; i++) {
+        for (int i = 2; i < size; i++) {
 
             int target = numArray[i];
 
             int startPoint = 0;
-            int endPoint = target - 1;
+            int endPoint = i - 1;
 
             while (true) {
 
