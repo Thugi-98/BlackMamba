@@ -21,17 +21,23 @@ class 좋은_수 {
 
         int answer = 0;
 
-        for (int i = 2; i < size; i++) {
+        for (int i = 0; i < size; i++) {
 
             int target = numArray[i];
 
             int startPoint = 0;
-            int endPoint = i - 1;
+            int endPoint = size -1;
 
-            while (true) {
+            while (startPoint < endPoint) {
 
-                if (startPoint == endPoint) {
-                    break;
+                if (startPoint == i) {
+                    startPoint++;
+                    continue;
+                }
+
+                if (i == endPoint) {
+                    endPoint--;
+                    continue;
                 }
 
                 int add = numArray[startPoint] + numArray[endPoint];
@@ -50,5 +56,6 @@ class 좋은_수 {
         }
 
         System.out.println(answer);
+
     }
 }
