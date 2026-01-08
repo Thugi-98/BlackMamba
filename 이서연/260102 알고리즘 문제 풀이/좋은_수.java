@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-class Main {
+class 좋은_수 {
     public static void main(String[] args) throws IOException {
         
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -26,12 +26,18 @@ class Main {
             int target = numArray[i];
 
             int startPoint = 0;
-            int endPoint = target - 1;
+            int endPoint = size -1;
 
-            while (true) {
+            while (startPoint < endPoint) {
 
-                if (startPoint == endPoint) {
-                    break;
+                if (startPoint == i) {
+                    startPoint++;
+                    continue;
+                }
+
+                if (i == endPoint) {
+                    endPoint--;
+                    continue;
                 }
 
                 int add = numArray[startPoint] + numArray[endPoint];
@@ -50,5 +56,6 @@ class Main {
         }
 
         System.out.println(answer);
+
     }
 }

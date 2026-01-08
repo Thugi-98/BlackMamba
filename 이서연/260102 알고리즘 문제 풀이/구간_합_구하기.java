@@ -1,7 +1,7 @@
 import java.io.IOException;
 import java.util.Scanner;
 
-class Main {
+class 구간_합_구하기 {
     public static void main(String[] args) throws IOException {
 
         Scanner scanner = new Scanner(System.in);
