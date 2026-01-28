@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.*;
 
 // nCm (중복 없음, 오름차순)
-class Main {
+class N과M_2 {
     static int N, M;
     static int[] arr;
     static StringBuilder sb = new StringBuilder();

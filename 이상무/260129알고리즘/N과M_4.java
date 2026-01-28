@@ -1,11 +1,9 @@
 import java.io.*;
 import java.util.*;
 
-// nPm (중복 없음, 순서 있음)
-class N과M_1 {
+class N과M_4 {
     static int N, M;
     static int[] arr;
-    static boolean[] visited;
     static StringBuilder sb = new StringBuilder();
 
     public static void main(String[] args) throws Exception {
@@ -16,14 +14,13 @@ class N과M_1 {
         M = Integer.parseInt(st.nextToken());
 
         arr = new int[M];
-        visited = new boolean[N + 1];
 
-        dfs(0);
+        dfs(0, 1);
 
         System.out.print(sb.toString());
     }
 
-    static void dfs(int depth) {
+    static void dfs(int depth, int start) {
         if (depth == M) {
             for (int i = 0; i < M; i++) {
                 if (i > 0)
@@ -34,13 +31,9 @@ class N과M_1 {
             return;
         }
 
-        for (int i = 1; i <= N; i++) {
-            if (!visited[i]) {
-                visited[i] = true;
-                arr[depth] = i;
-                dfs(depth + 1);
-                visited[i] = false;
-            }
+        for (int i = start; i <= N; i++) {
+            arr[depth] = i;
+            dfs(depth + 1, i);
         }
     }
 }
